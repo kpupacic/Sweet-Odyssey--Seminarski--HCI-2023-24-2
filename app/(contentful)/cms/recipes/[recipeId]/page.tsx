@@ -3,6 +3,7 @@ import Image from "next/image";
 import contentfulService from "@/lib/contentfulClient";
 import { TypeRecipeDetailItem } from "@/app/(contentful)/types/TypeRecipe";
 import { Params } from "react-router-dom";
+import Link from "next/link";
 
 type Props = TypeRecipeDetailItem;
 
@@ -54,7 +55,7 @@ const RecipeIDPage = async ({ params }: { params: Params }) => {
   const filteredRecipe = recipes.filter(recipe => recipe.id.includes(recipeId));
 
   if (!filteredRecipe || filteredRecipe.length === 0) {
-      return <div>An error has occurred! This recipe cannot be fetched!</div>;
+      return <div><Link href="@/app/not-found.js">Return Home</Link></div>;
   }
 
   return (
