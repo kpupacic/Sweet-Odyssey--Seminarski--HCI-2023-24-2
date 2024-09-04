@@ -9,6 +9,10 @@ const OthersPage: FC<{ searchParams: SearchParams }> = async ({ searchParams }) 
 
   return (
     <main>
+      <div className="section-description">
+        <h1>Other recipes</h1>
+        <p>A bit of everything — from unique dishes to hidden gems, all gathered in one place.</p>
+      </div>
       <ul className="cards gap-5">
         {filteredRecipes.sort((a, b) => a.name.localeCompare(b.name)).map((recipe) => (
           <li key={recipe.id}>
