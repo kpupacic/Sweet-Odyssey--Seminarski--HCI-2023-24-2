@@ -8,6 +8,10 @@ const AllRecipesPage: FC<{ searchParams: SearchParams }> = async ({ searchParams
 
   return (
     <main>
+      <div className="section-description">
+        <h1>All Recipes</h1>
+        <p>The complete collection — every recipe we have ever baked up!</p>
+      </div>
       <ul className="cards gap-5">
         {recipes.sort((a, b) => a.name.localeCompare(b.name)).map((recipe) => (
           <li key={recipe.id}>
