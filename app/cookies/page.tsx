@@ -9,6 +9,10 @@ const CookiesPage: FC<{ searchParams: SearchParams }> = async ({ searchParams })
 
   return (
     <main>
+      <div className="section-description">
+        <h1>Cookies</h1>
+        <p>Every cookie in the jar — right here, right now.</p>
+      </div>
       <ul className="cards gap-5">
         {filteredRecipes.sort((a, b) => a.name.localeCompare(b.name)).map((recipe) => (
           <li key={recipe.id}>
